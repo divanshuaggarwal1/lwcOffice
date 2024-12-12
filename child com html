@@ -1,0 +1,6 @@
+<template>
+    <div>
+        <p>Message from Parent: {message}</p>
+        <button onclick={handleClick}>Click Me</button>
+    </div>
+</template>
