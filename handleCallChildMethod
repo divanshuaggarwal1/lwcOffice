@@ -1,0 +1,8 @@
+handleCallChildMethod() {
+        // Select a specific child component based on contact ID
+        const childComponent = this.template.querySelector('c-contact-edit-child[data-id="003XXXXXXXXXXXXXXX"]'); // Replace with actual contact ID
+        if (childComponent) {
+        } else {
+            console.error('Child component not found');
+        }
+    }
