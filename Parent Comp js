@@ -1,0 +1,22 @@
+import { LightningElement } from 'lwc';
+
+export default class ParentComponent extends LightningElement {
+    parentMessage = 'Hello Child!';
+
+    handleInputChange(event) {
+        this.parentMessage = event.target.value;
+    }
+
+    // Method to call the child's public method
+    callChildMethod() {
+        const childComponent = this.template.querySelector('c-child-component');
+        if (childComponent) {
+            childComponent.showAlert();
+        }
+    }
+
+    handleChildClick(event) {
+        // Handle the custom event from the child
+        alert(`Received event from child: ${event.detail.message}`);
+    }
+}
