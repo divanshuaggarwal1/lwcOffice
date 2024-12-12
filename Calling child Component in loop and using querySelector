@@ -1,0 +1,9 @@
+<template if:true={contacts}>
+                <template for:each={contacts} for:item="contact">
+                    <c-contact-edit-child
+                        key={contact.Id}
+                        contact={contact}
+                        data-id={contact.Id}>
+                    </c-contact-edit-child>
+                </template>
+            </template>
