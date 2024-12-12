@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Parent Component">
+        <div>
+            <lightning-input
+                label="Enter message for child"
+                value={parentMessage}
+                onchange={handleInputChange}>
+            </lightning-input>
+            <lightning-button
+                label="Call Child Method"
+                onclick={callChildMethod}>
+            </lightning-button>
+        </div>
+        <c-child-component
+            message={parentMessage}
+            onchildclick={handleChildClick}>
+        </c-child-component>
+        
+    </lightning-card>
+</template>
