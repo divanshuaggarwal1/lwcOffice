@@ -1,0 +1,17 @@
+import { LightningElement, api } from 'lwc';
+
+export default class ChildComponent extends LightningElement {
+    @api message; 
+
+    @api showAlert() {
+        alert('Method in child component was called!');
+    }
+
+    handleClick() {
+        // Dispatching an event to notify the parent
+        const event = new CustomEvent('childclick', {
+            detail: { message: 'Child button clicked!' }
+        });
+        this.dispatchEvent(event);
+    }
+}
